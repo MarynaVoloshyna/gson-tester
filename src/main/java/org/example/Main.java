@@ -15,9 +15,7 @@ public class Main {
 
         String JSON = getJSON("https://api.monobank.ua/bank/currency");
         System.out.println(getExhangeRate(JSON));
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        Currency[] currency = gson.fromJson(JSON, Currency[].class);
-        System.out.println(Arrays.toString(currency));
+       
     }
 
     public static String getJSON(String spec) throws IOException {
